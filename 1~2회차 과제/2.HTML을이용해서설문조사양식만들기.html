@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>개인취향 설문조사</h1>
+        <p>모든 항목에 빠짐없이 답해주십시오.</p>
+    </header>
+    <hr>
+    <main>
+        <form>
+            <fieldset>
+                <legend>개인정보</legend>
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name"></input>
+                <br>
+                <label for="email">이메일</label>
+                <input type="email" id="email" name="email">
+            </fieldset>
+            <fieldset>
+                <legend>질문</legend>
+                <p>1. 연령대가 어떻게 되시나요?</p>
+                <select name="age" id="age">
+                    <option value="teen">10대</option>
+                    <option value="twenty">20대</option>
+                    <option value="thirty">30대</option>
+                    <option value="fourty">40대</option>
+                    <option value="fifty">50대</option>
+                    <option value="other">60대 이상</option>
+                </select>
+    
+                <p>2. 좋아하는 계절이 뭔가요?</p>
+                <input type="radio" id="spring" name="season">
+                <label for="spring">봄</label>
+                <input type="radio" id="summer" name="season">
+                <label for="summer">여름</label>
+                <input type="radio" id="autumn" name="season">
+                <label for="autumn">가을</label>
+                <input type="radio" id="winter" name="season">
+                <label for="winter">겨울</label>
+    
+                <p>3. 좋아하는 색깔이 뭔가요?</p>
+                <input type="color" id="color" name="color">
+    
+                <p>3-1. 그 색을 선택한 이유가 뭔가요?</p>
+                <textarea rows="10" cols="50" name="cuase"></textarea>
+            </fieldset>
+            <input type="submit" name="submit">
+        </form>
+    </main>
+    <hr>
+    <footer>
+        <p>수고하셨습니다.</p>
+    </footer>
+</body>
+</html>
