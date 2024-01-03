@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 폼</title>
+    <link href="challenge-05.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h3 id="title">OZ초격차 회원가입</h3>
+    <form id="sign_up">
+        <div>
+            <label for="name">이름 </label>
+            <input id="name" name="name"
+            type="text" placeholder="홍길동">
+            <br>
+        </div>
+
+        <div>
+            <label for="birth">생년월일 </label>
+            <input id="birth"
+            type="text" placeholder="ex) 20241212">
+            <br>
+        </div>
+
+        <div>
+            <label for="id">아이디 </label>
+            <input id="id" name="id"
+            type="text" placeholder="영문자,숫자 조합">
+            <button id="verification">중복 확인</button>
+            <br>
+        </div>
+
+        <div>
+            <label for="pw">비밀번호 </label>
+            <input id="pw" name="pw"
+            type="password" placeholder="영문자,숫자,특수문자 조합">
+            <br>
+        </div>
+
+
+        <div id="phone-verification">
+            <label for="phone">핸드폰 </label>
+            <input id="phone" name="phone"
+            type="tel" placeholder="010-1234-5678">
+
+            <button type="button">인증번호 전송</button><br>
+            <input type="text" placeholder="인증번호를 입력하시오"
+            id="verification_code" name="verification_code">
+            
+            <button type="button">인증</button>
+        </div>
+
+        <div>
+            <span>성별</span>
+            <input id="woman" name="gender"
+            type="radio">
+            <label for="woman">여성 </label>
+            <input id="man" name="gender"
+            type="radio">
+            <label for="man">남성 </label>
+            <br>
+        </div>
+
+
+        <input type="submit" value="가입하기">
+    </form>
+</body>
+</html>
