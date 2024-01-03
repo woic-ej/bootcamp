@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    margin: 0;
+    background: linear-gradient(red, blue);
+}
+
+h3{
+    border: 2px solid red;
+    border-radius: 10px;
+    color: #F5A9E1;
+    background-color: aliceblue;
+    padding: 15px;
+}
