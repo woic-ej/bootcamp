@@ -1,0 +1,34 @@
+*{
+    text-align: center;
+    font-family: 'Diphylleia', serif;
+    font-family: 'Gaegu', sans-serif;
+}
+
+html{
+    background-color: #A9D0F5;
+    font-size: 16px;
+}
+
+body{
+    width: 700px;
+    margin: auto;   /*너비에서 남는 여백을 동일하게 분배 => 가운데 정렬 효과*/
+}
+
+h1{
+    font-size: 50px;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    border-radius: 200px;
+    border-style: dashed;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+#profile{
+    background-color: #F3F781;
+}
