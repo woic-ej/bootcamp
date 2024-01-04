@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>채팅방 만들기</title>
+    <link href="ch11.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Dokdo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main class="chat-screen">
+            <section class="chat-screen__bar">
+                <div class="user">
+                    <div class="user__column1">
+                        <div class="user__pic">
+                            <img src="images/팡이.jpg">
+                        </div>
+                    </div>
+                    <div class="user__column2">
+                        <p class="user__nick">팡이 없는 고독방</p>
+                        <p class="user__count">31</p>
+                    </div>
+                    <div class="user__column3">
+                        <img class="user__option"
+                        src="images/더보기.png" rel="더보기 아이콘">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <form class="chat-form">
+            <section class="chat-form__field">
+                <textarea class="chat-form__msg"></textarea>
+                <input type="submit" value="전송" class="chat-form__btn">
+            </section>
+        </form>
+    </div>
+</body>
+</html>
