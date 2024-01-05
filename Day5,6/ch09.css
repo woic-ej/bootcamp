@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+.container{
+    height: 100%;
+    background-color: #D8D8D8;
+}
+
+.introduce-screen {
+    height: 31%;
+    background-color: #F5A9A9;
+}
+
+.introduce > div{
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    height: 190px;
+}
+
+.enjoy_things > a{
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.sidebar{
+    background-color: bisque;
+    text-align: center;
+    width: 200px;
+}
+
+.introduce_content {
+    border: 1px dashed gray;
+    overflow: scroll;
+    width: 450px;
+    background-color: #FFFFFF;
+}   
+
+h4{
+    text-decoration: underline;
+}
+
+
+
