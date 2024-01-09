@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    background-color: aqua;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+.screen{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    html{
+        background-color: rgb(223, 226, 43);
+    }
+    .screen-type::after{
+        content: "안녕하세요";
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html{
+        background-color: blueviolet;
+    }
+    .screen-type::after{
+        content: "오늘은 눈이 와요";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    html{
+        background-color: rgb(89, 226, 43);
+    }
+    .screen-type::after{
+        content: "초록색 화면이네요";
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        background-color: rgb(226, 43, 43);
+    }
+    .screen-type::after{
+        content: "반응형 웹 신기하네요";
+    }
+}
+
+
