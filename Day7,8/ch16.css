@@ -1,0 +1,183 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+}
+
+header{
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    text-align: center;
+    animation: blink 0.5s linear infinite;
+}
+
+.navigate{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #6E6E6E;
+    color: white;
+}
+
+.navigate > a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 40px;
+    color: #FE2E2E;
+    padding: 0 10px;
+}
+
+.menu{
+    list-style-type: none;
+    width: 600px;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li{
+    font-size: 18px;
+    color:aliceblue;
+}
+
+.menu li:hover{
+    font-size: 20px;
+    padding: 5px;
+    background-color: #585858;
+}
+
+.navigate .menu-icon, #checkbox{
+    display: none;
+}
+
+#checkbox + label{
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+main{
+    height: 100%;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+    background-color: #F6E3CE;
+}
+
+.about-oz{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.about-oz p{
+    font-size: 30px;
+    color: #FF0000;
+}
+
+.about-oz h1{
+    font-size: 80px;
+}
+
+.study-tools{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.study-tools a{
+    display: flex;
+    justify-content: center;
+}
+
+.study-tools div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    width: 300px;
+    height: 500px;
+    margin: 30px 30px;
+    
+    border-radius: 10px;
+    background-color: #BFFF00;
+    color: black;
+}
+
+.study-tools div:hover{
+    width: 400px;
+    height: 500px;
+    margin: 20px 20px;
+}
+
+.study-tools img{
+    margin-bottom: 20px;
+}
+
+.class-page1 > p:nth-child(2) {
+    color: #5882FA;
+    font-size: 20px;
+}
+
+.class-page2 > p:nth-child(2) {
+    color: #AC58FA;
+    font-size: 20px;
+}
+
+.class-page3 > p:nth-child(2) {
+    color: #FF8000;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 786px){
+    .navigate .menu{
+        display: none;
+    }
+
+    .navigate .menu-icon{
+        display: block;
+    }
+
+    .study-tools{
+        display:block;
+    }
+
+    .study-tools a div{
+        width: 400px;
+        height: 500px;
+    }
+
+    .study-tools div:hover{
+        width: 300px;
+        height: 600px;
+        margin: 20px 20px;
+    }
+
+}
+
+@keyframes blink{
+    from {color:#e90000;}
+    to {color:#000;}
+}
