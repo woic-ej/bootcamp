@@ -1,0 +1,32 @@
+body {
+    font-family: 'Diphylleia', serif;
+    text-align: center;
+    width: 400px;
+    margin: auto;  
+}
+
+#title{
+    border-radius: 10px;
+    background-color:#BEF781;
+    box-shadow: 5px 5px 5px 5px #A9A9F5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #A9A9F5;
+    background-color: #A9D0F5;
+}
+
+form div{
+    margin-bottom: 5px;
+}
+
+.btn button{
+    width: 200px;
+    margin-top: 10px;;
+}
+
