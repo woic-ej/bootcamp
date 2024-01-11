@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+.html{
+    font-size: 16px;
+}
+
+.container{
+    width: 300vw;
+    /* transform 요소가 변경될 때 0.5초에 걸쳐서 변화 */
+    transition: transform 0.5s;
+}
+
+.inner{
+    width: 100vw;
+    float: left;
+}
+
+.inner img{
+    width: 100%;
+}
+
+.btns{
+   display: flex;
+   justify-content: center;
+}
+
+.btns button{
+    margin: 0 0.5rem;
+}
