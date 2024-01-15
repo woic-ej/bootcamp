@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미스테리 숫자 맞추기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Mystery Number 맞추기</h1>
+        <p>1부터 100사이의 숫자를 입력하세요!</p>
+        
+        <div>
+            <input type="text" id="number">
+            <button id="submitBtn">두둥</button>
+        </div>
+    </div>
+
+    <script>
+        const div = document.getElementById("container");
+        const input = document.getElementById("number");
+        const button = document.getElementById("submitBtn");
+        const restart = document.createElement("button");
+        const p = document.createElement("p");
+        p.id = 'hint';
+
+        const answer =  Math.floor(Math.random()*100+1);
+        restart.innerText = "다시하기";
+        restart.style.marginTop = "10px";
+
+        console.log(answer);
+
+        button.addEventListener("click", () => {
+            const number = input.value;
+            if(number < answer){
+                p.textContent = "힌트: 숫자가 너무 작아요! 조금 더 높여보세요!";
+                div.appendChild(p);
+            } else if(number > answer) {
+                p.textContent = "힌트: 숫자가 너무 커요! 조금 줄여볼까요?";
+                div.appendChild(p);
+            } else{
+                alert("짝짝짝! 정답입니다");
+                if(document.getElementById('hint')) div.removeChild(p);
+                div.appendChild(restart);
+            }
+        })
+
+        restart.addEventListener("click" , () => {
+            window.location.reload();
+        })
+
+    </script>
+</body>
+</html>

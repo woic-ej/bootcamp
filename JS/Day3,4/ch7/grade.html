@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 계산</title>
+</head>
+<body>
+    <div id="container"></div>
+    
+    <script>
+        const div = document.getElementById("container");
+        const score = parseInt(prompt("시험 점수를 입력하시오."));
+        let grade = "";
+
+        if(score >= 90) {
+            grade = "A";
+        } else if (score >= 80 && score < 90) {
+            grade = "B";
+        } else if (score >= 70 && score < 80) {
+            grade = "C";
+        } else if (score >= 60 && score < 70) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        const p = document.createElement("p");
+        p.textContent = `나의 시험점수는 ${score}, 학점은 ${grade}`;
+        div.appendChild(p);
+    </script>
+</body>
+</html>

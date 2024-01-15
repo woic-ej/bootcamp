@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4의 배수 출력하기</title>
+</head>
+<body>
+    
+    <div id="container"></div>
+
+    <script>
+        const div = document.getElementById("container");
+        const br = document.createElement("br");
+        const h1 = document.createElement("h1");
+        h1.textContent = "4의 배수 5개씩 출력하기";
+        div.appendChild(h1);
+
+        let result = "";
+        let i = 25;
+        let count = 0;
+
+        while(i <= 126) {
+            result += `${i*4}`;
+            i++;
+            count++;
+
+            if(count == 5|| i == 126)  {
+                const p = document.createElement("p");
+                p.textContent = result;
+                div.appendChild(p);
+                
+                result = "";
+                count = 0;
+        } 
+
+
+        }
+
+    </script>
+</body>
+</html>
