@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 만들기</title>
+</head>
+
+<body>
+    <div id="container">
+        <div class="title">
+            <h1>구구단 표</h1>
+            <p>2단 ~ 9단을 만들어 보세요!</p>
+        </div>
+        <div id="times-table">
+
+        </div>
+    </div>
+
+    <script>
+        const div = document.getElementById("times-table");
+        const table = document.createElement("table");
+
+        table.border = "1";
+        
+        div.append(table);
+
+        for (let i = 2; i <= 9; i++) {
+            const th = document.createElement("th");
+            th.textContent = i;
+
+            table.append(th);
+        }
+
+        for (let i = 1; i <= 9; i++) {
+            const tr = document.createElement("tr");
+            for (let j = 2; j <= 9; j++) {
+                const td = document.createElement("td");
+                td.textContent = `${j}*${i}=${j*i}`;
+                td.style.padding = "5px";
+                tr.append(td);
+            }
+            table.append(tr);
+        }
+
+
+    </script>
+</body>
+
+</html>

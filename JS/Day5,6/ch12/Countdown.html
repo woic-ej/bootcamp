@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘 날짜</title>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <script>
+        const div = document.getElementById("container");
+        const p = document.createElement("p");
+        const remain_time = document.createElement("p");
+
+        p.style.fontWeight = "900";
+        remain_time.style.fontWeight = "900";
+
+        function getDate() {
+            const date = new Date();
+            const lastTime = new Date("2025-1-1");
+
+            const dateInfo = date.toString();
+            const diff = lastTime - date;
+
+            const diffDay = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const diffHour = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const diffMin = Math.floor((diff / (1000 * 60)) % 60);
+            const diffSec = Math.floor(diff / 1000 % 60);
+
+            p.textContent = `현재 시간: ${dateInfo}`;
+            remain_time.textContent = `올해의 남은 시간: 
+            ${diffDay}일 ${diffHour}시간 ${diffMin}분 ${diffSec}초 남았습니다.`
+        }
+
+        getDate();
+        setInterval(getDate, 1000);
+
+        div.append(p);
+        div.append(remain_time);
+    </script>
+</body>
+
+</html>

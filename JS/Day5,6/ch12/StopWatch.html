@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치 만들기</title>
+</head>
+<body>
+    <div id="container">
+        <h1>&#9200;스톱워치&#9200;</h1>
+        <p id="times">00:00:00</p>
+        <div id="Btns">
+            <button id="start" class="btn">시작</button>
+            <button id="stop" class="btn">중지</button>
+        </div>
+    </div>
+
+    <script>
+        const p = document.getElementById("times");
+        const startBtn = document.getElementById("start");
+        const stopBtn = document.getElementById("stop");
+
+        let stTime,timerStart;
+        let isRunning = false;
+
+        startBtn.addEventListener("click", () => {
+            if(! stTime){
+                stTime = new Date().getTime();
+                isRunning = true;
+            }
+
+            timerStart = setInterval(() => {
+                const nowTime = new Date().getTime();
+                const newTime = new Date(nowTime - stTime);
+
+                const m = newTime.getMinutes();
+                const s = newTime.getSeconds();
+                const ms = Math.floor(newTime.getMilliseconds() / 10)
+
+                p.textContent = `${addZero(m)}:${addZero(s)}:${addZero(ms)}`;
+            }, 1);
+        })
+
+        stopBtn.addEventListener("click", () => {
+            if(timerStart) {
+                clearInterval(timerStart);
+                stTime ='';
+            }
+        })
+
+        function addZero(num){
+            return (num < 10 ? '0'+num : ''+num);
+        }
+
+    </script>
+</body>
+</html>
