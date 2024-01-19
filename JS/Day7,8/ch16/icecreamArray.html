@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이스크림 추가 및 나열</title>
+</head>
+
+<body>
+    <div id="conatainer">
+        <div class="Btns">
+            <button id="input_ice">아이스크림 종류 추가</button>
+            <button id="output_iceList">아이스크림 이름 출력</button>
+            <button id="print_iceList">입력한 아이스크림 목록 출력</button>
+        </div>
+        <p style="font-weight: 900;">입력한 아이스크림 목록:</p>
+        <div id="icecreamList"></div>
+    </div>
+
+    <script>
+        const inputBtn = document.getElementById("input_ice");
+        const outputBtn = document.getElementById("output_iceList");
+        const printBtn = document.getElementById("print_iceList");
+        const iceDiv = document.getElementById("icecreamList");
+
+        const iceArr = [];
+
+        inputBtn.addEventListener("click", () => {
+            const ice = prompt("추가하고싶은 아이스크림의 이름을 입력하세요!");
+            iceArr.push(ice);
+        })
+
+        outputBtn.addEventListener("click", () => {
+            // for(let i = 0; i < iceArr.length; i++){
+            //     alert(iceArr[i]);
+            // }
+            iceArr.forEach((item) => {
+                alert(item);
+            })
+        })
+
+        printBtn.addEventListener("click", () => {
+            iceArr.forEach((item) => {
+                iceDiv.textContent += `${item} `
+            })
+            iceArr.splice(0,iceArr.length);
+        })
+    </script>
+</body>
+
+</html>
