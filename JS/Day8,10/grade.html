@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>성적표</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>떡잎 유치원 멀리뛰기 결과</h1>
+        <table border = 1>
+            <tr>
+                <th>이름</th>
+                <th>점수</th>
+            </tr> 
+            <tr>
+                <td>짱구</td>
+                <td class="score" id="짱구"></td>
+            </tr>           
+            <tr>
+                <td>맹구</td>
+                <td class="score" id="맹구"></td>
+            </tr>           
+            <tr>
+                <td>철수</td>
+                <td class="score" id="철수"></td>
+            </tr>           
+            <tr>
+                <td>훈이</td>
+                <td class="score" id="훈이"></td>
+            </tr>           
+            <tr>
+                <td>유리</td>
+                <td class="score" id="유리"></td>
+            </tr>           
+            <tr>
+                <td>수지</td>
+                <td class="score" id="수지"></td>
+            </tr>           
+        </table>
+        <p id="result">75점이 넘는 사람 : </p>
+    </div>
+
+    <script>
+        const p = document.querySelector("#result");
+        const scoreTd = document.querySelectorAll(".score");
+
+        for(let i = 0; i < 6; i ++){
+            const rd = Math.floor(Math.random()*101);
+            scoreTd[i].textContent = rd;
+            if(rd > 75) p.textContent += `${scoreTd[i].id} `;
+        }
+
+    </script>
+</body>
+</html>
